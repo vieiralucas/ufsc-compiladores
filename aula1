@@ -1,58 +1,57 @@
-Aula 1
+# Aula 1
 
-# Um compilador eh um composto
+## Um compilador é um composto
 
 ## Front End do compilador:
 
-- Analisador Léxico                           -> Analise dos caracteres permitidos                                            -> Etapa Analise
-- Analisador Sintático                        -> Analise da sintaxe de uma sentenca (sintaxe do for, sintaxe da declaracao)   -> Etapa Analise
-- Analisdor Semântico                         -> Analise do sentido da frase (por exemplo checagem de tipo)                   -> Etapa Analise
+- Analisador Léxico                           -> Análise dos caracteres permitidos                                            -> Etapa Análise
+- Analisador Sintático                        -> Análise da sintaxe de uma sentenca (sintaxe do for, sintaxe da declaração)   -> Etapa Análise
+- Analisador Semântico                        -> Análise do sentido da frase (por exemplo: checagem de tipo)                  -> Etapa Análise
 
-- Geração de Código Intermediario                                                                                             -> Etapa Sintese
+- Geração de Código Intermediario                                                                                             -> Etapa Síntese
 
 "pobrema"
-- Não tem problema Lexico
+- Não tem problema léxico
   -> p#brema teria
 
 "Você pobrema ao supermercado"
-- Problema sintático, porque deveria ter um verbo no lugar de "pobrema". (Esperava um verbo)
+- Problema sintático, por que deveria ter um verbo no lugar de "pobrema". (Esperava um verbo)
 
-# Teoria da computação
+## Teoria da computação
 
 +-------------------------------------------------------------------------+
-| Linguagens                | Maquinas          | Gramáticas              |
+| Linguagens                | Máquinas          | Gramáticas              |
 +---------------------------+-------------------+-------------------------+
-| Ling. Regulares           | Automato Finito   | Gram. Regular           |  <- Expressões Regulares | Analisador Lexico | Linear ao codigo de entrada
+| Ling. Regulares           | Autômato Finito   | Gram. Regular           |  <- Expressões Regulares | Analisador Léxico | Linear ao código de entrada
 +---------------------------+-------------------+-------------------------|
-| Ling. Livres de Contexto  | Automato de Pilha | Gram. Livre de Contexto |  <- Analisador Sintatico | Linear * Constante
+| Ling. Livres de Contexto  | Autômato de Pilha | Gram. Livre de Contexto |  <- Analisador Sintático | Linear * Constante
 +---------------------------+-------------------+-------------------------+
 
-A analise semantica leva tempo polinomial, logo (Brute Force)
+A análise semântica leva tempo polinomial, logo (Brute Force)
 Tradução dirigida pela Sintaxe
 
 ## Back End:
 
-- Otimização de código          -> Algoritimos rapidos para encontrar coisas absurdamente lentas e otimizar ;) A ideia eh trocar segundos de compilacao por minutos de execucao -> Etapa Sintese
-- Geração de código objeto      -> Gerar o belo assembly (a verdade das verdades, single point of truth)                                                                        -> Etapa Sintese
-
+- Otimização de código          -> Algoritmos rápidos para encontrar coisas absurdamente lentas e otimizar ;) A ideia é trocar segundos de compilação por minutos de execução -> Etapa Síntese
+- Geração de código objeto      -> Gerar o belo assembly (a verdade das verdades, single point of truth)                                                                      -> Etapa Síntese
 
 #################################################################################################################################################################
 
 # O conceito de Alfabeto
-  É um conjunto finito e não vazio de simbolos (simbolo eh qualquer porra [obvio])
+  É um conjunto finito e não vazio de simbolos (simbolo é qualquer porra [óbvio])
 
-Σ = {alfa, beta, whatever, simbolos poha}
+Σ = {alfa, beta, whatever, símbolos poha}
 Σ = {a, b}
 
-Σ -> (Sigma maiusculo)
+Σ -> (Sigma maiúsculo)
 
-# O conceito de palavra <cadeia>  (Na verdade o nome correto eh cadeia mas tem que falar palavra pros coleguinhas entenderem)
+# O conceito de palavra <cadeia> (Na verdade o nome correto é cadeia mas tem que falar palavra pros coleguinhas entenderem)
   Sequência finita de símbolos
 
 w = a, w1 = ab, w2 = ba
 
 w4 = ε (epsilon) <- cadeia vazia
-TODOS OS ALFABETOS CONTEM A CADEIA VAZIA
+TODOS OS ALFABETOS CONTÊM A CADEIA VAZIA
 A CADEIA VAZIA ESTA CONTIDA EM QUALQUER ALFABETO
 
 Σ0 = {ε}
