@@ -1,0 +1,70 @@
+Aula 2
+
+compiladores
+
+-> alfabeto
+
+-> cadeia
+  -> concatenacao
+  -> comprimento
+
+-> linguagem
+
+-> mecanismos reconhecedeores
+
+=> Analise Lexica
+  (Token-padrao-lexema)
+  -> Como?
+    -> AFD/AFND
+    -> operacoes
+
+-> cadeia - w = ababba
+  -> concatenacao - w1 = aba, w2 = bab, w3 = ε
+          w1w2 = ababab
+
+  -> comprimento
+    |w1| = 3
+    |w2| = 3
+    |w1w2| = 6
+    |w3| = 0
+
+# O CONCEITO DE LINGUAGEM
+Conjunto de cadeias construidas, sobre um alfabeto Σ, que assumem uma determinada propriedade
+
+L = {w | w pertence Σ = {a.b}* e w assume P}
+P é uma propriedade
+
+Ex. 1:
+L1 = {w | w pertence Σ = {a.b}* e w começa com a}
+L1 = {a, aa, ab, aaa, aab...}
+
+Ex. 2:
+L2 = {w | w pertence Σ = {a.b}* e |w| é par}
+L2 = {ε, aa, ab, ba, bb, aaaa...}
+
+# Maquininha do hu3 (Those machiiines)
+ - Fita infinita a direita
+ |_|_|_|_| ...
+ fodase
+
+Maquina que valida L2
+
+Um autonomo deterministico é definido como:
+  M = (K, Σ, S, q0, F)
+  Sequencia de 5 elementos: Quintupla
+onde:
+  K é o conjunto finito e não vazio de estados
+  Σ é o conjunto finito e não vazio de simbolos
+  S é a função de transição de estados
+    S: KxΣ  -> K
+  q0 é o estado inicial (q0 pertene a K)
+  F é o conjunto de estados finais
+
+Tabela de transicao
+-----------------
+S       | a  | b
+--------+----+---
+-> * q0 | q1 | q1
+     q1 | q0 | q0
+
+
